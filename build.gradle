@@ -1,0 +1,36 @@
+buildscript {
+    repositories {
+        // google()
+        // mavenCentral()
+        maven {
+            url 'http://maven.google.com/'
+            allowInsecureProtocol = true // <-- לייגט צו די שורה
+        }
+        maven {
+            url 'http://repo1.maven.org/maven2/'
+            allowInsecureProtocol = true // <-- לייגט צו די שורה
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.1.0'
+    }
+}
+
+allprojects {
+    repositories {
+        // google( )
+        // mavenCentral()
+        maven {
+            url 'http://maven.google.com/'
+            allowInsecureProtocol = true // <-- לייגט צו די שורה
+        }
+        maven {
+            url 'http://repo1.maven.org/maven2/'
+            allowInsecureProtocol = true // <-- לייגט צו די שורה
+        }
+    }
+}
+
+task clean(type: Delete ) {
+    delete rootProject.buildDir
+}
